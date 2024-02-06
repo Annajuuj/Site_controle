@@ -11,7 +11,7 @@
     --preto: #000000;
     --branco: #FFFFFF;
     --rosa: #DE7070;
-
+    --roxo-mais-claro: #D5D1EF;
 }
 
 
@@ -69,7 +69,7 @@ img {
     justify-content: space-between;
     align-items: center;
     background: var(--rosa);
-    background: linear-gradient(0deg, var(--rosa) 60%, var(--roxo-medio) 100%);
+    background: linear-gradient(0deg, var(--rosa) 60%, var(--roxo-medio) 100%, var(--branco) 10%);
 }
 
 .direita {
@@ -87,16 +87,19 @@ img {
     width: 50%;
 }
 
-p {
-    font-size: 80px;
-    font-weight: 600;
-    text-align: center;
-}
+.corpo .esquerda {
 
-h1 {
-    font-size: 30px;
-    font-weight: 400;
-    text-align: center;
+    p {
+        font-size: 80px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
 }
 
 .botão-primario {
@@ -113,9 +116,69 @@ h1 {
     padding-top: 10px;
 }
 
-.seila {
+.seilas {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
 }
+
+.controle {
+    width: 500px;
+}
+
+.subtitulo {
+
+    p {
+        font-size: 80px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+}
+
+#seila {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.seila {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.seila .botao-primario {
+    text-align: center;
+    background: linear-gradient(0deg, var(--branco) 10%, var(--roxo-mais-claro) 100%);
+
+}
+
+.produto {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    height: auto;
+}
+
+.produto a {
+    width: 200px;
+}
+
+.produto img {
+    height: auto;
+}
+
