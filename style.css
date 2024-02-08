@@ -32,6 +32,10 @@ body {
 
 }
 
+.topo img {
+    width: 80px;
+}
+
 .logo {
     width: 50px;
 
@@ -69,7 +73,7 @@ img {
     justify-content: space-between;
     align-items: center;
     background: var(--rosa);
-    background: linear-gradient(0deg, var(--rosa) 60%, var(--roxo-medio) 100%, var(--branco) 10%);
+    background: linear-gradient(0deg, var(--rosa) 0%, var(--roxo-medio) 100%);
 }
 
 .direita {
@@ -153,6 +157,21 @@ h1 {
     padding: 40px 0;
 }
 
+#seila{
+    p {
+        font-size: 50px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+}
+
 .seila {
     display: flex;
     justify-content: space-around;
@@ -172,6 +191,7 @@ h1 {
     align-items: center;
     gap: 34px;
     height: auto;
+    position: relative;
 }
 
 .produto a {
@@ -182,3 +202,313 @@ h1 {
     height: auto;
 }
 
+.botao-menu {
+    display: none;
+}
+
+
+.botao-menu-close {
+    display: none;
+}
+
+
+#beneficios {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficios {
+    padding: 0 100px;
+    display: flex;
+    gap: 140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficio-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.beneficio h4 {
+    font-size: 30px;
+}
+
+.beneficio p {
+    text-align: center;
+    font-size: 30px;
+}
+
+#beneficios .botao-primario {
+    padding: 10px 50px;
+}
+
+.beneficio-titulo i {
+    font-size: 30px;
+}
+
+#sobre-nos {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#sobre-nos .esquerda {
+    height: 600px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobre-nos .esquerda img {
+    width: 80%;
+    object-fit: cover;
+}
+
+#sobre-nos .direita {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 45%;
+    gap: 36px;
+    padding: 0 250px;
+}
+
+#sobre-nos .direita {
+
+    h2 {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+}
+    p {
+        font-size: 20px;
+    }
+
+}
+footer {
+    background-color: var(--roxo-medio);
+    color: var(--branco);
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer img {
+    width: 50px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+footer h5 {
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+
+footer li {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0;
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+}
+
+footer li:hover {
+    opacity: 60%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-lateral {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Esconde o menu fora da tela */
+        width: 250px;
+        height: 100%;
+        background-color: var(--roxo-medio); /* Cor de fundo do menu */
+        transition: left 0.3s ease;
+        z-index: 1000; /* Garante que o menu esteja acima de outros elementos */
+        flex-direction: column;
+    }
+
+    .botao-menu-close {
+        display: none;
+    }
+
+    .menu-lateral.aberto {
+        left: 0;
+    }
+
+    .menu-lateral.aberto .botao-menu-close {
+        display: block;
+    }
+
+    .menu-lateral ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 20px;
+    }
+
+    .menu-lateral ul li {
+        margin-bottom: 10px;
+    }
+
+    .menu-lateral ul li a {
+        color: var(--branco);
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .botao-primario {
+        display: none;
+    }
+
+    .botao-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: transparent;
+        border: none;
+        color: var(--roxo-mais-escuro);
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999; /* Garante que o botão esteja acima do menu */
+    }
+
+    .menu-lateral ul {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        text-align: left;
+    }
+
+    .topo img {
+        display: none;
+    }
+
+    #inicio {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+    }
+
+    #inicio .esquerda {
+        align-items: center;
+    }
+
+    #inicio .esquerda, .direita {
+        width: 100%;
+    }
+
+    #inicio .direita img {
+        width: 50%;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    #produtos {
+        padding: 0;
+    }
+
+    .produtos {
+        justify-content: space-around;
+        padding-top: 26px;
+        flex-direction: column;
+    }
+
+    .produto {
+        gap: 16px;
+        padding-top: 20px;
+    }
+
+    #beneficios {
+        padding: 30px 0;
+        gap: 50px;
+    }
+
+    .beneficios {
+        padding: 0 100px;
+        display: flex;
+        gap: 80px;
+
+    }
+
+    .beneficios {
+        flex-direction: column;
+    }
+
+    #sobre-nos {
+        flex-direction: column;
+        padding: 20px 50px;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sobre-nos .esquerda h2, p{
+        width: auto;
+    }
+
+    #sobre-nos .esquerda img {
+        width: 60%;
+        object-fit: cover;
+    }
+
+    #sobre-nos .direita {
+        width: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer ul {
+        text-align: start;
+    }
+}
